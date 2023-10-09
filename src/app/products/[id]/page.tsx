@@ -4,6 +4,8 @@ import { prisma } from "@/lib/db/prisma"
 import { Metadata } from "next"
 import Image from "next/image"
 import { cache } from "react"
+import AddToCartBtn from "../AddToCartBtn"
+import { incrementProductQuantity } from "../actions"
 
 type ProductPageProps = {
   params: {
@@ -49,6 +51,7 @@ export default async function ProductPage ({ params: { id }} : ProductPageProps)
         <h1 className="text-5xl font-bold">{product.name}</h1>
         <PriceTag price={product?.price} className="mt-4"/>
         <p className="py-6">{product?.description}</p>
+        <AddToCartBtn productId={product.id} incrementProductQuantity={incrementProductQuantity} />
       </div>
     </div>
   )
