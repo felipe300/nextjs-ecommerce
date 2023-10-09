@@ -15,14 +15,15 @@ const config: Config = {
           accent: "#90dddc",
           neutral: "#191627",
           "base-100": "#2b3055",
+          "base-200": "#e3e6e6",
           info: "#3778e1",
           success: "#69e8c8",
           warning: "#d27c14",
           error: "#fa6f57",
         },
         body: {
-          "background-color": "#e3e6e6",
-        },
+          "background-color": "#e3e6e6"
+        }
       },
     ],
   },
